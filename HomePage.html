@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dandy Bot | Twisted Board Alerts</title>
+    <style>
+        :root {
+            --bg: #1c1f26;
+            --card: #262a33;
+            --card-hover: #2d323d;
+            --text: #e6e6e6;
+            --muted: #b8c0d6;
+            --accent: #8aa4d4;
+            --accent2: #6a7ba8;
+            --border: #333842;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: radial-gradient(circle at top, #27304a, var(--bg));
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a { color: var(--accent); }
+
+        .container {
+            width: min(1120px, 100% - 40px);
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 18px;
+        }
+
+        nav .brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #edf2ff;
+            text-decoration: none;
+        }
+
+        nav .menu {
+            display: flex;
+            gap: 12px;
+        }
+
+        nav .menu a {
+            padding: 10px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text);
+            background: rgba(255,255,255,0.04);
+            transition: 0.2s;
+        }
+
+        nav .menu a:hover { background: rgba(255,255,255,0.1); }
+
+        header {
+            background: linear-gradient(135deg, #3a4a6a, #6a7ba8);
+            border-radius: 16px;
+            padding: 56px 24px;
+            color: #f5f7fa;
+            margin-bottom: 24px;
+            box-shadow: 0 20px 45px rgba(2, 9, 24, 0.4);
+        }
+
+        header h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0; letter-spacing: 0.02em; }
+
+        header p { font-size: 1.12rem; opacity: 0.95; margin: 16px 0 0; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 14px 28px;
+            background: var(--accent);
+            color: #1c1f26;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border: 1px solid transparent;
+            transition: 0.25s;
+        }
+
+        .btn:hover {
+            background: #a7bce6;
+            border-color: #ced9ef;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            transition: 0.2s;
+        }
+
+        .card:hover { background: var(--card-hover); border-color: #4a5363; }
+
+        .card h3 { margin-top: 0; }
+
+        section { margin-bottom: 32px; }
+
+        footer {
+            text-align: center;
+            padding: 18px 10px;
+            background: #181b20;
+            border-top: 1px solid #20252d;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        @media (max-width: 600px) {
+            .btn { width: 100%; justify-content: center; }
+            nav { flex-direction: column; gap: 8px; }
+            nav .menu { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <a class="brand" href="HomePage.html">Dandy Bot</a>
+        <div class="menu">
+            <a href="HomePage.html">Home</a>
+            <a href="invite.html">Bot Invite</a>
+            <a href="discord.html">Discord Server</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Dandy Bot</h1>
+        <p>Your calm, reliable source for real‑time <strong>Twisted Board</strong> updates in Dandy’s World.</p>
+
+        <a class="btn" href="invite.html">Invite Dandy Bot</a>
+    </header>
+
+    <section>
+        <h2>How it works</h2>
+        <p>Dandy Bot fetches the current Twisted Board status every minute from a website, compares the latest board data, and notifies your Discord channel the moment something changes. This ensures your community always has the freshest, actionable information with minimal setup.</p>
+
+        <div class="grid">
+            <div class="card">
+                <h3>⚡ Instant Alerts</h3>
+                <p>Receive updates within minutes of board rotation, no manual checking required.</p>
+            </div>
+            <div class="card">
+                <h3>🔧 One-click Setup</h3>
+                <p>Invite the bot, authorized a channel, and you're ready. Works without extra permissions.</p>
+            </div>
+            <div class="card">
+                <h3>📢 Clear Formatting</h3>
+                <p>Structured embeds and plain text output ensure everyone in your server understands updates at a glance.</p>
+            </div>
+            <div class="card">
+                <h3>🛡️ Stable Monitoring</h3>
+                <p>24/7 uptime and retry logic built in for reliability during transient Roblox or network outages.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Why choose Dandy Bot</h2>
+        <ul>
+            <li>Optimized for Dandy’s World Twisted Board alerts only — no bloat.</li>
+            <li>Not affiliated with Roblox or Dandy’s World, made by Funky_player2311 (solo developer).</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Quick Links</h2>
+        <div class="grid">
+            <a class="card" href="invite.html">Invite the bot now</a>
+            <a class="card" href="Story.html">Read the story of what made me design this bot in the first place</a>
+            <a class="card" href="discord.html">Join support Discord</a>
+            <a class="card" href="HomePage.html#faq">FAQ</a>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>FAQ</h2>
+        <div class="card">
+            <h3>How do I install it?</h3>
+            <p>Click ‘Invite Dandy Bot’, select your server, and grant basic permissions it requests. Then configure a channel with <code>!setchannel</code> if needed.</p>
+        </div>
+        <div class="card">
+            <h3>How often is the board update check?</h3>
+            <p>Typically every 1 minute.</p>
+        </div>
+        <div class="card">
+            <h3>Can I choose the language of alerts?</h3>
+            <p>Language options are planned for a future release; for now updates are in English only.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Dandy Bot © 2026 — Not affiliated with Roblox or Dandy’s World</p>
+        <p><a href="discord.html">Support server</a> • <a href="invite.html">Invite Bot</a></p>
+    </footer>
+</div>
+
+</body>
+</html>
