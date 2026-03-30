@@ -1,5 +1,1 @@
-# Ignore all HTML files
-*.html
 
-# Explicitly allow README or other documentation if needed
-#!README.html
